@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="10" minHeight="300.0" minWidth="600.0" prefHeight="300.0" prefWidth="600.0" vgap="10" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hakamada.explorer2.controller.Controller">
+   <columnConstraints>
+      <ColumnConstraints minWidth="300.0" maxWidth="600" percentWidth="55.0" />
+      <ColumnConstraints percentWidth="45.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="300" prefHeight="300" vgrow="ALWAYS" />
+   </rowConstraints>
+   <GridPane GridPane.columnIndex="0">
+      <columnConstraints>
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+         <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+          <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+          <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+         <RowConstraints minHeight="10.0" percentHeight="60.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+      <children>
+         <GridPane GridPane.rowIndex="4">
+            <columnConstraints>
+               <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" percentWidth="30" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5" />
+               <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="30" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5" />
+               <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="30" />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+               <Button fx:id="btnStart" mnemonicParsing="false" text="Start">
+                  <GridPane.margin>
+                     <Insets />
+                  </GridPane.margin></Button>
+               <Button fx:id="btnStop" mnemonicParsing="false" text="Stop" GridPane.columnIndex="2">
+                  <GridPane.margin>
+                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                  </GridPane.margin></Button>
+               <Button fx:id="btnReset" mnemonicParsing="false" text="Reset" GridPane.columnIndex="4">
+                  <GridPane.margin>
+                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                  </GridPane.margin></Button>
+            </children>
+         </GridPane>
+         <Label text="Root Path :" />
+         <TextField id="rootPath" fx:id="tfRootPath" prefHeight="25.0" prefWidth="300.0" GridPane.rowIndex="1" />
+         <Label prefWidth="67.0" text="Target Path :" GridPane.rowIndex="2" />
+         <TextField id="targetPath" fx:id="tfTargetPath" prefHeight="25.0" prefWidth="300.0" GridPane.rowIndex="3" />
+      </children>
+      <GridPane.margin>
+         <Insets bottom="10.0" left="10.0" top="10.0" />
+      </GridPane.margin>
+   </GridPane>
+   <GridPane GridPane.columnIndex="1">
+      <columnConstraints>
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+      <children>
+         <ListView id="logListView" fx:id="lvLogger" prefHeight="277.0" prefWidth="250.0" />
+      </children>
+      <padding>
+         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+      </padding>
+   </GridPane>
+</GridPane>
